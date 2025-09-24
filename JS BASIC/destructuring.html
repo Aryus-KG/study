@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // mengakses data secara manual
+      {
+        const nama = ["aryus", "kg", "phntme"];
+        const firstName = nama[0];
+        const middleName = nama[1];
+        const lastName = nama[2];
+
+        console.log(firstName);
+        console.log(middleName);
+        console.log(lastName);
+      }
+      // menggunakan destructuring
+      {
+        const name = ["eko", "kurniawan", "khannedy", "sandhika", "galih"];
+
+        const [namaDepan, namaTengah, namaBelakang, ...lainnya] = name;
+
+        console.log(namaDepan);
+        console.log(namaTengah);
+        console.log(namaBelakang);
+        console.log(lainnya);
+        console.log(lainnya[0]);
+        console.log(lainnya[1]);
+      }
+      {
+        // mengakses data dalam objek secara manual
+        //   const person = {
+        //     firstName: "aryus",
+        //     lastName: "kg",
+        //     // nested
+        //     addres: {
+        //       street: "jambu",
+        //       country: "indonesia",
+        //       island: "java",
+        //     },
+        //     hobby: "coding",
+        //     account: "@aryusjoki.hsr",
+        //   };
+
+        //   const infoFirstName = person.firstName;
+        //   const infoHobby = person.hobby;
+
+        //   console.log(infoFirstName);
+        //   console.log(infoHobby);
+
+        // mengakses data objek dengan destructuring
+
+        const person = {
+          infoFirstName: "aryus",
+          infoLastName: "kg",
+          // nested
+          infoAddres: {
+            infoStreet: "jambu",
+            infoCountry: "indonesia",
+            infoIsland: "java",
+          },
+          infoHobby: "coding",
+          infoAccount: "@aryusjoki.hsr",
+        };
+
+        const {
+          infoFirstName,
+          infoLastName,
+          infoAddres, // infoAddres:{infoStreet, infoCountry, infoIsland},
+          infoHobby,
+          infoAccount,
+        } = person;
+
+        const { infoStreet, infoCountry, infoIsland } = infoAddres;
+
+        console.log(infoAccount);
+        console.log(infoAddres);
+        console.log(infoHobby);
+        console.log(infoStreet);
+      }
+      // saat destructuring object, nama variabel penampung harus sama dengan nama properti di objek
+
+      // destructuring pada function parameter
+      {
+        function displayPerson({ firstName, middleName, lastName }) {
+          console.log(firstName);
+          console.log(middleName);
+          console.log(lastName);
+        }
+
+        const person = {
+          firstName: "aryus",
+          middleName: "kg",
+          lastName: "phntme",
+        };
+
+        displayPerson(person);
+      }
+
+      // destructuring array pada function
+      {
+        function sum([first, second]) {
+          return first + second;
+        }
+
+        console.log(sum([1, 5]));
+        console.log(sum([23, 10]));
+      }
+
+      //default value destructuring
+      {
+        const name = ["aryus", "kg"];
+        const [firstName, middleName, lastName = "joko"] = name;
+
+        console.log(firstName);
+        console.log(middleName);
+        console.log(lastName);
+      }
+
+      {
+        const person = {
+          firstName: "aryus",
+          middleName: "kg",
+        };
+
+        const { firstName, middleName, lastName = "budi" } = person;
+
+        console.log(firstName);
+        console.log(middleName);
+        console.log(lastName);
+      }
+
+      // menggunakan nama variable lain saat destructuring object
+      {
+        const person = {
+          firstName: "aryus",
+          middleName: "kg",
+        };
+
+        const {
+          firstName: namaDepan,
+          middleName: namaTengah,
+          lastName: namaBelakang = "budi",
+        } = person;
+
+        console.log(namaDepan);
+        console.log(namaTengah);
+        console.log(namaBelakang);
+      }
+    </script>
+  </body>
+</html>

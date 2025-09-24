@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konversi String Ke Number</title>
+  </head>
+  <body>
+    <script>
+      const value1 = parseInt("1");
+      const value2 = 1;
+      const sum = value1 + value2;
+
+      document.writeln(`<p>${sum}<p>`);
+
+      document.writeln(`<p>${parseInt(1.234)}<p>`);
+      document.writeln(`<p>${parseFloat(1.02)}<p>`);
+      document.writeln(`<p>${Number(1.234)}<p>`);
+
+      const a = 1;
+      const b = 1;
+      const total = a.toString() + b.toString();
+
+      document.writeln(`<p>${total}</p>`);
+
+      const x = "biji";
+      const y = 100;
+      document.writeln(`<p>${parseInt(x)}</p>`);
+
+      document.writeln(`<p>${parseInt("1salah")}<p>`);
+      document.writeln(`<p>${parseFloat("1.12sa")}<p>`);
+      document.writeln(`<p>${Number("1.12sa")}<p>`);
+    </script>
+  </body>
+</html>

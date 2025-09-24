@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   const sayHello = (nama) => {
+      //     const say = `Hello ${nama}`;
+      //     console.log(say);
+      //   };
+
+      //   sayHello("sigma");
+
+      const sayHello = (nama) => console.log(`hello ${nama}`);
+      sayHello("skibidi");
+
+      // arrow function tanpa return
+      const sum = (value1, value2) => console.log(value1 + value2);
+      sum(10, 10);
+
+      // arrow function tanpa kurung parameter
+      const sebutNama = (nama) => console.log(`absen, ada ${nama}`);
+      sebutNama("windah");
+
+      function giveMeName(callback) {
+        callback("aryus");
+      }
+      // anonymus function
+      giveMeName(function (name) {
+        console.log(`hello ${name}`);
+      });
+
+      //arrow function
+      giveMeName((name) => console.info(`hello ${name}`));
+    </script>
+  </body>
+</html>

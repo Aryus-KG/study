@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Generator</title>
+  </head>
+  <body>
+    <script>
+      function* createName() {
+        yield "Aryus";
+        yield "Kg";
+        yield "Phntme";
+      }
+
+      const name = createName();
+      for (const names of name) {
+        console.info(names);
+      }
+
+      function* buatGanjil(value) {
+        for (let i = 0; i < value; i++) {
+          if (i % 2 === 1) {
+            yield i;
+          }
+        }
+      }
+
+      const number = buatGanjil(10);
+      for (const element of number) {
+        console.log(element);
+      }
+    </script>
+  </body>
+</html>

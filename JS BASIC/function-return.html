@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Return Value</title>
+  </head>
+  <body>
+    <script>
+      function sayHello(firstName, lastName) {
+        const say = `Hello ${firstName} ${lastName}`;
+        return say;
+      }
+
+      const result = sayHello("budi", "santoso");
+      document.writeln(result);
+      document.writeln(`<p>${sayHello("sigma", "etst")}</p>`);
+
+      function getFinalValue(value) {
+        if (value > 90) {
+          return "A";
+        } else if (value > 80) {
+          return "B";
+        } else if (value > 70) {
+          return "C";
+        } else if (value > 60) {
+          return "D";
+        } else {
+          return "E";
+        }
+      }
+
+      const nilai = 90;
+      document.writeln(`nilai kamu adalah ${nilai}`);
+
+      function searchValue(array, searchValue) {
+        for (const item of array) {
+          console.log(item);
+          if (item === searchValue) {
+            return true;
+          }
+        }
+        return false;
+      }
+
+      const array = [1, 2, 4, 6, 32, 43, 24, 76, 213, 3544, 35];
+      const search = 32;
+      const cari = searchValue(array, search);
+      document.writeln(cari);
+    </script>
+  </body>
+</html>

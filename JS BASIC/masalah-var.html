@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // menggunakan let
+      let i = 20;
+      for (let i = 0; i <= 10; i++) {
+        // local scope
+        console.log(`ini adalah variabel i ke ${i} (local)`);
+      }
+
+      console.log(i + " ini global");
+
+      // menggunakan var
+      var x = 20;
+      for (var x = 0; x <= 10; x++) {
+        // local scope
+        console.log(`ini adalah variabel x ke ${x} (local)`);
+      }
+
+      console.log(x + " ini global");
+
+      // kata kunci var tidak mempunyai block scope
+    </script>
+  </body>
+</html>
