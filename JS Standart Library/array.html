@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // array forEach
+      {
+        const array = ["aryus", "kg", "phntme", "tatalov"];
+
+        array.forEach((element, index) => {
+          console.log(`Mahasiswa ke-${index + 1} adalah ${element}`);
+        });
+
+        array.forEach((element) => console.log(element));
+      }
+
+      // array queue
+
+      {
+        console.log("push shift");
+        const queue = [];
+
+        queue.push("aryus");
+        queue.push("kg");
+        queue.push("phntme");
+
+        console.log(queue);
+        console.log("//////");
+
+        console.log(queue.shift());
+        console.log(queue);
+
+        console.log(queue.shift());
+        console.log(queue);
+
+        console.log(queue.shift());
+        console.log(queue);
+      }
+
+      {
+        console.log("push pop");
+        const stack = [];
+
+        stack.push("aryus");
+        stack.push("kg");
+        stack.push("phntme");
+
+        console.log(stack);
+
+        console.log(stack.pop());
+        console.log(stack);
+
+        console.log(stack.pop());
+        console.log(stack);
+
+        console.log(stack.pop());
+        console.log(stack);
+      }
+
+      {
+        console.log("array search");
+        const arr = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5];
+
+        console.log(arr.find((element) => element > 4));
+        console.log(arr.findIndex((element) => element > 4));
+        console.log(arr.includes(5));
+        console.log(arr.indexOf(5));
+        console.log(arr.lastIndexOf(5));
+      }
+
+      {
+        console.log("array filter");
+
+        const number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        console.log(number.filter((value) => value % 2 === 1));
+        console.log(number.filter((value) => value % 2 === 0));
+      }
+
+      {
+        console.log("array transform");
+
+        const names = ["aryus", "kg", "phntme"];
+        const nameUp = names.map((value) => value.toUpperCase());
+
+        console.log(nameUp);
+
+        const nameReduce = names.reduce(
+          (before, value) => before + " " + value
+        );
+
+        console.log(nameReduce);
+
+        const nameRight = names.reduceRight(
+          (before, value) => before + " " + value
+        );
+
+        console.log(nameRight);
+
+        console.log(typeof nameReduce);
+        console.log(typeof nameRight);
+      }
+    </script>
+  </body>
+</html>

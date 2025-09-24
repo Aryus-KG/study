@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const person = {};
+      const regex = /^[a-zA-Z]{3,}$/;
+      const handlerPerson = {
+        get: (target, property) => {
+          console.log(`Mengakses property ${property}`);
+          return target[property];
+        },
+        set: (target, property, value) => {
+          if (typeof value == "string" && regex.test(value)) {
+            console.log(`Mengubah property ${property} dengan ${value}`);
+            target[property] = value;
+          } else {
+            throw new Error("harap masukkan string dengan minimal 3 huruf");
+          }
+        },
+      };
+
+      const proxyPerson = new Proxy(person, handlerPerson);
+
+      proxyPerson.firstName = "aryus";
+      proxyPerson.lastName = "kage";
+
+      console.log(proxyPerson.firstName);
+      console.log(proxyPerson.lastName);
+      console.log(person);
+    </script>
+  </body>
+</html>

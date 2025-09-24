@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const input = "12345";
+      const number = Number(input);
+
+      console.log(typeof input); // string
+      console.log(typeof number); // number
+      console.log(number); // 12345
+      console.log(Number("salah")); // NaN
+
+      // Number Static Properties
+
+      console.log(Number.MIN_VALUE);
+      console.log(Number.MAX_VALUE);
+      console.log(Number.MIN_SAFE_INTEGER);
+      console.log(Number.MAX_SAFE_INTEGER);
+
+      // Number Static Method
+
+      const data = Number("12345");
+
+      console.log(Number.isNaN(data)); // false (bukan nan)
+      console.log(Number.isInteger(data)); // true
+
+      // Number Istance Method
+      const value = Number("33550336");
+      console.log(value.toString(2));
+      console.log(value.toLocaleString("id-ID"));
+      console.log(value.toLocaleString("en-US"));
+    </script>
+  </body>
+</html>
