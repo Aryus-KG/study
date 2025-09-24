@@ -1,0 +1,5 @@
+Apa itu object?
+=> object adalah data yang berisi field / properties / attributes dan method / function / behavior
+
+Apa itu class
+- class adalah blueprint, prototype atau cetakan untuk membuat object

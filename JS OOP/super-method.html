@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Shape {
+        paint() {
+          console.log(`paint shape`);
+        }
+      }
+
+      class Circle extends Shape {
+        paint() {
+          super.paint();
+          console.log(`paint circle`);
+        }
+      }
+
+      const circle = new Circle();
+      circle.paint();
+
+      console.log(circle);
+    </script>
+  </body>
+</html>

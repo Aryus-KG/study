@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Person {
+        constructor(firstName, lastName) {
+          this.firstName = firstName;
+          this.lastName = lastName;
+        }
+
+        get fullName() {
+          return `${this.firstName} ${this.lastName}`;
+        }
+
+        set fullName(value) {
+          const result = value.split(" ");
+          this.firstName = result[0];
+          this.lastName = result[1];
+        }
+      }
+
+      const aryus = new Person("Aryus", "Kg");
+      console.log(aryus);
+      console.log(aryus.fullName);
+
+      aryus.fullName = "Kashiki Luka";
+      console.log(aryus);
+      console.log(aryus.fullName);
+    </script>
+  </body>
+</html>

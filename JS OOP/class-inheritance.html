@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Employee {
+        // constructor(name) {
+        //   this.name = name;
+        // }
+
+        sayHello(name) {
+          console.log(`hello ${name} my name is Employee ${this.name}`);
+        }
+      }
+
+      class Manager extends Employee {
+        // constructor(name) {
+        //   this.name = name;
+        // }
+
+        sayHello(name) {
+          console.log(`hello ${name} my name is Manager ${this.name}`);
+        }
+      }
+
+      const budi = new Employee();
+      budi.name = "budi";
+      budi.sayHello("joko");
+
+      const aryus = new Manager();
+      aryus.name = "aryus";
+      aryus.sayHello("joko");
+
+      console.log(budi);
+      console.log(aryus);
+    </script>
+  </body>
+</html>

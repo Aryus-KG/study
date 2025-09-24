@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Configuration {
+        static name = "belajar js dasar";
+        static version = 1.0;
+        static author = "eko";
+      }
+
+      const config = new Configuration();
+      console.log(config);
+
+      // mengakses static field
+
+      console.log(Configuration.name);
+      console.log(Configuration.version);
+      console.log(Configuration.author);
+    </script>
+  </body>
+</html>

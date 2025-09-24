@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Person(firstName, lastName) {
+        // parameter di constructor function
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.sayHello = function (name) {
+          console.log(`hello ${name} my name is ${this.firstName}`); // method di constructor function
+        };
+      }
+
+      // menambahkan property ke prototype
+      Person.prototype.sayBye = function () {
+        console.log(`${this.firstName} was say Good Bye!`);
+      };
+
+      Person.prototype.run = function () {
+        console.log(`${this.firstName} is Running!`);
+      };
+
+      const budi = new Person("budi", "nugraha");
+      budi.sayBye();
+      budi.run();
+
+      const yanto = new Person("yanto", "setiawan");
+
+      console.log(budi);
+      console.log(yanto);
+    </script>
+  </body>
+</html>

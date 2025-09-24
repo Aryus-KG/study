@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Employee {}
+
+      class Manager {}
+
+      const budi = new Employee();
+      const aryus = new Manager();
+
+      console.log(budi instanceof Employee); // true
+      console.log(budi instanceof Manager); // false
+
+      console.log(aryus instanceof Manager); // true
+      console.log(aryus instanceof Employee); // false
+
+      // instanceof juga berlaku untuk inheritance
+      // cth
+      // class Manager extends Employee
+    </script>
+  </body>
+</html>
