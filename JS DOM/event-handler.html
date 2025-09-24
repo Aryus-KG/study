@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    
+    - Node memiliki sebuah kemampuan untuk bereaksi terhadap suatu kejadian, misalnya kejadian di klik, mouse diatas node tersebut, dan lain lain.
+
+    - ada banyak sekali jenis kejadian yang bisa kita buat aksinya ketika kejadian tersebut terjadi, atau dikenal dengan nama Event Handler
+
+    - ada dua cara kita menambahkan event handler ke node, menggunakan 
+
+     => event target 
+     atau 
+     => global event handler
+    
+    -->
+
+    <!-- Event Target -->
+    <!-- 
+
+    - event target merupakan parent class dari Node. artinya semua node memiliki kemampuan dari event target
+
+    - Pada event target, kita bisa menggunakan method
+
+    => addEventListener(type, callback);
+    
+    -->
+
+    <input type="button" value="Click ME!" id="button" />
+
+    <script>
+      const button = document.getElementById("button");
+
+      button.addEventListener("click", () => {
+        button.setAttribute("value", "damnn broo");
+      });
+    </script>
+  </body>
+</html>

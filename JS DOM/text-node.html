@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    ini adalah text tanpa tag
+    <script>
+      const text = document.body.firstChild;
+
+      console.info(text.wholeText);
+    </script>
+
+    <!-- 
+    
+    - Saat kita membuat HTML, kadang kita membuat teks tanpa tag
+    - Saat  halaman web tersebut direpresentasikan dalam DOM, text tanpa tag bukanlah merupakan Element, melainkan Node
+    - Lebih tepatnya adalah Text Node
+
+    <div>
+        <p> ini adalah contoh text dengan tag </p>
+    </div>
+
+    <div>
+        ini adalah contoh text tanpa tag
+    </div>
+
+    -->
+  </body>
+</html>
