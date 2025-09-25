@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button type="button" id="btn">buka window kosong</button>
+    <p id="content"></p>
+    <script>
+      const btn = document.getElementById("btn");
+      const content = document.getElementById("content");
+
+      const height = window.screen.height;
+      const width = window.screen.width;
+
+      content.innerText = `lebar layar saat ini adalah ${width}, tinggi layar saat ini adalah ${height}`;
+
+      btn.onclick = () => {
+        window.open();
+      };
+    </script>
+  </body>
+</html>

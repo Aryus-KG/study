@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>this is text</p>
+
+    <ul>
+      <li class="menuItem">satu</li>
+      <li id="menu2">dua</li>
+      <li>tiga</li>
+      <li class="menuItem">empat</li>
+      <li>lima</li>
+    </ul>
+
+    <div class="first">this is first</div>
+    <div class="second">this is second</div>
+    <div class="third">this is third</div>
+    <script>
+      // universal selector *
+      const all = document.querySelectorAll("*");
+      console.log(all);
+
+      // type selector
+      const li = document.querySelectorAll("li");
+      console.log(li);
+
+      // class selector
+      const classItem = document.querySelectorAll(".menuItem");
+      console.info(classItem);
+
+      // id selector
+      const id = document.querySelectorAll("#menu2");
+      console.log(id);
+
+      //   attribute selector
+      const allClass = document.querySelectorAll("[class]");
+
+      console.log(allClass);
+    </script>
+  </body>
+</html>
