@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="script.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Spacing</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+      #toggle:checked ~ label div.toggle-checklist {
+        @apply translate-x-6;
+      }
+
+      @custom-variant dark (&:where(.dark, .dark *));
+    </style>
+  </head>
+  <body class="scroll-smooth dark:bg-slate-900 dark:text-slate-100">
+    <h1 class="text-center font-semibold text-2xl p-5">
+      Belajar Spacing TailwindCSS
+    </h1>
+
+    <section class="mb-10 bg-indigo-100">
+      <h2 class="font-bold text-center">spacing</h2>
+      <div class="m-4 text-center">Margin</div>
+      <div class="p-5 text-center m-1">Padding</div>
+    </section>
+
+    <section class="mb-10 bg-sky-200">
+      <h2 class="text-center font-semibold text-2xl p-5">Sizing</h2>
+      <div class="w-32 h-32 m-auto text-center">Width</div>
+      <div class="w-32 mb-10 bg-red-100 m-auto">Min Height</div>
+    </section>
+
+    <section class="mb-10 font-[poppins] max-w-3xl mx-auto">
+      <h2 class="m-5 text-4xl font-semibold">TailwindCSS Typography</h2>
+      <div class="m-5 text-lg">
+        Ditulis Oleh <a href="#" class="underline text-gray-600">Alomani</a>, 69
+        Januari 2045
+      </div>
+      <blockquote class="italic m-5 font-light text-xl">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+        molestias commodi sequi sapiente vitae odit, sit officiis ex praesentium
+        nam.
+      </blockquote>
+      <p class="m-5">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus
+        perferendis explicabo cupiditate iure corrupti repellendus earum nemo
+        eligendi? Eius beatae necessitatibus qui aperiam id quis vitae ab
+        impedit commodi non quod voluptatibus aspernatur ipsa illum at ut,
+        reprehenderit dolor ratione nemo iste architecto praesentium dicta!
+        Optio nemo ullam minus quame.
+      </p>
+    </section>
+
+    <!--  -->
+
+    <div
+      class="max-w-xl bg-[#bada55] h-96 m-auto p-5 text-2xl overflow-y-scroll bg-fixed"
+      style="
+        background-image: url('https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1200');
+      "
+    >
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis ratione
+      similique dolor, veritatis, ex unde exercitationem commodi architecto,
+      nobis natus deleniti quidem magni sapiente labore dolorem aliquid aliquam
+      ea. Minus, veniam tempora. Obcaecati eius et, assumenda beatae modi
+      dolorum facilis quod explicabo iusto alias ad temporibus minima ea dolor
+      ullam, adipisci inventore impedit doloribus commodi sapiente pariatur. A
+      fugit deleniti obcaecati dicta harum, non reprehenderit facilis ea
+      inventore magni sunt voluptatem numquam illum nesciunt doloribus delectus
+      vitae repellat possimus quam velit! Adipisci, harum! Dolor exercitationem
+      voluptates hic nisi minima beatae rem qui. Fugit dolore itaque voluptas
+      quae repudiandae porro dicta!
+    </div>
+    <div
+      class="bg-contain bg-no-repeat bg-center mt-10 max-w-xl mx-auto h-96 bg-slate-300 rounded-xl border-5 border-slate-400 shadow-xl shadow-slate-500 overflow-hidden hover:brightness-150 flex"
+      style="background-image: url(src/1.jpg)"
+    >
+      <div
+        class="w-[100px] h-[100px] bg-white/70 rounded-full mix-blend-darken m-auto backdrop-blur-sm"
+      ></div>
+    </div>
+
+    <hr class="my-20" />
+
+    <div class="flex justify-center items-center">
+      <span class="text-sm m-2 text-slate-500">Light</span>
+      <input type="checkbox" name="" id="toggle" class="hidden" />
+      <label for="toggle">
+        <div
+          class="w-12 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer"
+        >
+          <div class="toggle-checklist w-4 h-4 bg-white rounded-full"></div>
+        </div>
+      </label>
+      <span class="text-sm m-2 text-slate-500">Dark</span>
+    </div>
+
+    <button
+      class="rounded-full bg-sky-400 py-3 px-10 text-white font-semibold mx-auto block hover:bg-sky-600 my-10 font-[poppins] focus:ring-sky-200 focus:ring-2"
+    >
+      Save
+    </button>
+
+    <div
+      class="my-5 max-w-lg p-5 rounded border-slate-200 mx-auto shadow-md border-1 hover:bg-sky-500 group"
+    >
+      <h5 class="group-hover:text-white font-bold text-lg mb-3 text-slate-700">
+        myCard
+      </h5>
+      <p
+        class="text-slate-600 group-hover:text-white selection:bg-emerald-300 selection:text-slate-800"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi illo,
+        ipsa aspernatur magnam facilis hic incidunt accusamus repellat et rerum,
+        soluta veniam eveniet voluptatum voluptate? Consectetur magni dolorum
+        animi minus!
+      </p>
+    </div>
+
+    <div
+      class="max-w-lg border-slate-200 rounded-xl mx-auto shadow-md p-5 border-2"
+    >
+      <form action="">
+        <label for="email"
+          ><span
+            class="mb-2 block font-semibold text-slate-700 after:content-['*'] after:text-pink-500 after:ml-1"
+            >Email ...</span
+          >
+          <input
+            autocomplete="off"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email..."
+            class="rounded px-3 py-2 border-2 border-slate-200 w-full block placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 invalid:text-rose-500 invalid:focus:ring-rose-700 invalid:focus:border-rose-700 peer"
+          />
+          <p class="mt-2 text-rose-700 invisible peer-invalid:visible">
+            Email Anda Tidak Valid
+          </p>
+        </label>
+      </form>
+    </div>
+    <div class="mb-96"></div>
+  </body>
+</html>
