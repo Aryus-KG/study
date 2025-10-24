@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive dan Flexbox</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="mt-24 mb-24">
+    <div
+      class="container px-5 max-w-xs mx-auto sm:max-w-md flex lg:max-w-full lg:p-0"
+    >
+      <div class="lg:p-12 flex-1">
+        <h3 class="text-4xl font-bold text-slate-800 mb-5 sm:text-5xl">
+          Judul <span class="text-sky-500">Web</span>
+        </h3>
+        <img
+          src="src/1.jpg"
+          alt=""
+          class="rounded shadow-md shadow-slate-600 sm:h-64 sm:w-full object-cover lg:hidden md:w-80"
+        />
+        <h2 class="mt-5 text-2xl font-semibold text-slate-800 capitalize">
+          judul artikel
+        </h2>
+        <p class="mt-2 text-slate-600 lg:text-md">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis hic
+          commodi illum soluta pariatur quisquam numquam at necessitatibus
+          repellendus fugiat? Illo natus inventore
+        </p>
+        <div
+          class="mt-5 bg-slate-600 inline-block px-5 py-2 text-white font-semibold rounded-full md:w-80"
+        >
+          <a href="#">Subscribe</a>
+        </div>
+      </div>
+      <div class="hidden lg:flex lg:w-1/2">
+        <img
+          src="src/1.jpg"
+          class="rounded-l-full shadow-md shadow-slate-600 lg:w-full lg:h-80 object-cover"
+        />
+      </div>
+    </div>
+    <h2 class="font-semibold text-xl mb-10 mt-4 text-center text-slate-700">
+      MyGallery
+    </h2>
+    <div
+      class="container mx-auto px-5 sm:flex sm:flex-wrap sm:gap-5 sm:justify-center bg-white"
+    >
+      <div
+        class="rounded shadow-md overflow-hidden shadow-slate-300 mb-5 sm:mb-0 sm:w-64 md:w-80 lg:w-72"
+      >
+        <img src="src/1.jpg" class="w-full sm:h-40 sm:object-cover md:h-52" />
+        <div class="px-6 py-4">
+          <h1 class="font-bold text-xl mb-2 text-slate-700 capitalize">
+            image title
+          </h1>
+          <p class="text-slate-500 text-sm">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero,
+            quas?
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="rounded shadow-md overflow-hidden shadow-slate-300 mb-5 sm:mb-0 sm:w-64 md:w-80 lg:w-72"
+      >
+        <img src="src/1.jpg" class="w-full sm:h-40 sm:object-cover md:h-52" />
+        <div class="px-6 py-4">
+          <h1 class="font-bold text-xl mb-2 text-slate-700 capitalize">
+            image title
+          </h1>
+          <p class="text-slate-500 text-sm">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero,
+            quas?
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="rounded shadow-md overflow-hidden shadow-slate-300 mb-5 sm:mb-0 sm:w-64 md:w-80"
+      >
+        <img src="src/1.jpg" class="w-full sm:h-40 sm:object-cover md:h-52" />
+        <div class="px-6 py-4">
+          <h1 class="font-bold text-xl mb-2 text-slate-700 capitalize">
+            image title
+          </h1>
+          <p class="text-slate-500 text-sm">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero,
+            quas?
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
